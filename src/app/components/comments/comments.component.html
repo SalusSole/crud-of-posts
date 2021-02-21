@@ -6,7 +6,7 @@
     >
         Ver comentarios
     </button>
-    <div class="comments" *ngIf="!openComments">
+    <div class="comments" *ngIf="openComments">
         <div *ngFor="let comment of data">
             <div class="card">
                 <span class="email-comment"><b>{{comment.email}}</b></span>
