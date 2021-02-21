@@ -6,17 +6,26 @@
     >
         Ver comentarios
     </button>
-    <div class="comments" *ngIf="openComments">
+    <div class="comments" *ngIf="!openComments">
         <div *ngFor="let comment of data">
             <div class="card">
-                <span class="tittle-comment"><b>{{comment.id}}</b></span>
-                <!-- <span class="by-comment roboto-italic"> by </span> -->
                 <span class="email-comment"><b>{{comment.email}}</b></span>
-                <textarea *ngIf="editComment.id == comment.id" class="body-comment roboto" [(ngModel)]="comment.body">
+                <textarea
+                    *ngIf="editComment.id == comment.id"
+                    class="body-comment roboto"
+                    [(ngModel)]="comment.body"
+                    appTxtareaAutoresize
+                >
+                </textarea>
+                <textarea
+                    disabled
+                    *ngIf="editComment.id != comment.id"
+                    class="body-comment roboto"
+                    [(ngModel)]="comment.body"
+                    appTxtareaAutoresize
+                >
                 </textarea>
 
-                <textarea disabled *ngIf="editComment.id != comment.id" class="body-comment roboto" [(ngModel)]="comment.body">
-                </textarea>
             </div>
             <div class="buttons">
                 <button class="btn-plain" *ngIf="editComment.id != comment.id" (click)="onEditComment(comment.id)">Editar</button>
@@ -34,12 +43,29 @@
     </button>
 </div>
 <div class="new-comment">
-    <input
+    <textarea
+        appTxtareaAutoresize
         type="text"
-        class="input-new-comment"
+        class="input-new-comment roboto"
         placeholder="Ingrese un comentario..."
         name="newComment"
         [(ngModel)]="newComment"
     >
-    <img (click)="onSendComment()" src="./../../../assets/send.svg" alt="Send" class="send">
+    </textarea>
+    <button class="send btn-plain" (click)="onSendComment()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <defs id="defs3051">
+              <style type="text/css" id="current-color-scheme">
+                .ColorScheme-Text {
+                  color:#ff8700;
+                }
+                </style>
+            </defs>
+           <path style="fill:currentColor;fill-opacity:1;stroke:none" 
+               d="M 1,2 4,8 1,14 1,14 15,8 Z M 3.1152344,3.9960938 12.458984,8 3.1152344,12.003906 5.1171875,8 Z"
+               class="ColorScheme-Text"
+               />
+          </svg>          
+    </button>
+    <!-- <img (click)="onSendComment()" src="./../../../assets/send.svg" alt="Send" class="send"> -->
 </div>

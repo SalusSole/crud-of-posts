@@ -3,8 +3,9 @@
 $roboto: 'Roboto', sans-serif;
 
 body {
-    background: rgb(39, 38, 38);
     font-family: $roboto;
+    background: url(./assets/pattern.png), rgb(39, 38, 38);
+    background-size: 250px;
 }
 
 .roboto-italic {
