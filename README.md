@@ -1,27 +1,37 @@
-# CrudPosts
+# Crud de Posts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+Desarrollé este proyecto con Angular en su versión 11.0.6.
 
-## Development server
+Esta es una página sencilla que muestra posts de prueba con sus respectivos comentarios obtenidos de [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+***
+##### NOTA
+***
 
-## Code scaffolding
+A continuación adjunto una captura de pantalla tomada del sitio de [JSONPlaceholder](https://jsonplaceholder.typicode.com/) donde se muestran las rutas y los métodos con los que es posible hacer peticiones a la API proporcionada. El proyecto que desarrollé solo hace uso de las rutas que se encargan de recuperar con GET los posts y comentarios, ya que no se proporciona una ruta que permita eliminar, añadir o editar un **comentario**, pero debido a que la prueba solicita *poder agregar comentarios a los posts*, *editar comentarios*, y *eliminar comentarios* realicé dichas funcionalidades, pero al no haber una ruta en [JSONPlaceholder](https://jsonplaceholder.typicode.com/) que permita efectuar estas acciones, lo hice de manera que los comentarios y cambios en ellos se guarden en un array de manera temporal en la página, así que al refrescarla página se perderán los datos que usted haya ingresado, ya que la API no permite guardar los cambios en anteriores o nuevos comentarios.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Rutas admitidas](https://i.ibb.co/vJ7p5q5/Screenshot-2021-02-21-JSONPlaceholder-Free-Fake-REST-API.png)
 
-## Build
+Habiendo aclarado el contexto con el que desarrollé este proyecto, mostraré cómo puede evaluar dicho proyecto de forma local.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Cómo clonar y ejecutar el proyecto de forma local
 
-## Running unit tests
+Antes de clonar y ejecutar este proyecto en su computadora asegúrese de tener instalado [git](https://git-scm.com/downloads), [node](https://nodejs.org/es/download/) y [angular CLI](https://angular.io/cli).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Para clonar el repositorio abra una terminal o línea de comandos en el directorio donde desee clonar el repositorio y ejecute lo siguiente
+```
+git clone https://github.com/SalusSole/crud-of-posts.git
+```
+- Posteriormente diríjase a la carpeta del proyecto
+```
+cd crud-of-posts
+```
+- Después debe instalar las dependencias que requiere el proyecto
+```
+npm install
+```
+- Si por alguna razón hay un error en la instalación, solo vuelva a ejecutar el comando anterior
+- Finalmente, para correr el proyecto en su navegador ejecute  el siguiente comando
+```
+ng serve --open
+```
