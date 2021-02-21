@@ -75,26 +75,29 @@ export class CommentsComponent implements OnInit {
   }
 
   onSendComment() {
-    if(this.data.length > 0){
-      const lasttComm = this.data.pop();
-      this.data = [...this.data, lasttComm];
-      this.data.push({
-        'postId': this.postID,
-        'id': lasttComm.id+1,
-        'name': 'Name example',
-        'email': 'example@example.com',
-        'body': this.newComment
-      });
-    } else if(this.data.length == 0) {
-      this.data.push({
-        'postId': this.postID,
-        'id': 1,
-        'name': 'Name example',
-        'email': 'example@example.com',
-        'body': this.newComment
-      });
+    if(this.newComment.length == 0) {
+    } else {
+      if(this.data.length > 0){
+        const lasttComm = this.data.pop();
+        this.data = [...this.data, lasttComm];
+        this.data.push({
+          'postId': this.postID,
+          'id': lasttComm.id+1,
+          'name': 'Name example',
+          'email': 'example@example.com',
+          'body': this.newComment
+        });
+      } else if(this.data.length == 0) {
+        this.data.push({
+          'postId': this.postID,
+          'id': 1,
+          'name': 'Name example',
+          'email': 'example@example.com',
+          'body': this.newComment
+        });
+      }
+      this.newComment=""
     }
-    this.newComment=""
   }
 
 }
