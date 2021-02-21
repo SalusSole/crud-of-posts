@@ -1,0 +1,23 @@
+
+<div *ngIf="data.length > 0">
+    <div class="container" *ngFor="let post of data">
+        
+        <div class="container-post">
+            <div class="img-post"></div>
+            <span class="post-name">{{post.title}}</span>
+            <p class="post-body">{{post.body}}</p>
+        </div>
+        
+        <app-comments [postID]="post.id"></app-comments>
+        
+    </div>
+</div>
+
+<div class="container" *ngIf="data.length == 0">
+    
+    <div class="container-post">
+        <div class="img-post"></div>
+        <span class="post-name">Cargando...</span>
+    </div>
+    
+</div>

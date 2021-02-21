@@ -1,0 +1,45 @@
+<div class="container-comments">
+    <button
+        *ngIf="!openComments"
+        (click)="onViewComments()"
+        class="view-comments btn-plain"
+    >
+        Ver comentarios
+    </button>
+    <div class="comments" *ngIf="openComments">
+        <div *ngFor="let comment of data">
+            <div class="card">
+                <span class="tittle-comment"><b>{{comment.id}}</b></span>
+                <!-- <span class="by-comment roboto-italic"> by </span> -->
+                <span class="email-comment"><b>{{comment.email}}</b></span>
+                <textarea *ngIf="editComment.id == comment.id" class="body-comment roboto" [(ngModel)]="comment.body">
+                </textarea>
+
+                <textarea disabled *ngIf="editComment.id != comment.id" class="body-comment roboto" [(ngModel)]="comment.body">
+                </textarea>
+            </div>
+            <div class="buttons">
+                <button class="btn-plain" *ngIf="editComment.id != comment.id" (click)="onEditComment(comment.id)">Editar</button>
+                <button class="btn-plain" *ngIf="editComment.id == comment.id" (click)="onEditedComment(comment.id)">Hecho</button>
+                <button class="btn-plain" (click)="onDeleteComment(comment.id)">Borrar</button>
+            </div>
+        </div>
+    </div>
+    <button
+        class="btn-plain view-comments"
+        (click)="onDisableComments()"
+        *ngIf="openComments && data.length > 0"
+    >
+        Ocultar comentarios
+    </button>
+</div>
+<div class="new-comment">
+    <input
+        type="text"
+        class="input-new-comment"
+        placeholder="Ingrese un comentario..."
+        name="newComment"
+        [(ngModel)]="newComment"
+    >
+    <img (click)="onSendComment()" src="./../../../assets/send.svg" alt="Send" class="send">
+</div>
