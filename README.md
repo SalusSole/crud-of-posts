@@ -16,35 +16,26 @@ Habiendo aclarado el contexto con el que desarrollé este proyecto mostraré có
 
 ## Link del proyecto
 
-[Crud de Posts](https://salussole.github.io/crud-of-posts/).
+[https://salussole.github.io/crud-of-posts/](https://salussole.github.io/crud-of-posts/).
 
 ## Cómo clonar y ejecutar el proyecto de forma local
 
-Antes de clonar y ejecutar este proyecto en su computadora asegurese de tener instalado git y node.
+Antes de clonar y ejecutar este proyecto en su computadora asegurese de tener instalado [git](https://git-scm.com/downloads), [node](https://nodejs.org/es/download/) y [angular CLI](https://angular.io/cli).
 
-- Para clonar el repositorio abra una terminal o línea de comandos en el directorio donde desee clonar el repositorio y ejecute lo siguiente:
+- Para clonar el repositorio abra una terminal o línea de comandos en el directorio donde desee clonar el repositorio y ejecute lo siguiente
 ```
 git clone https://github.com/SalusSole/crud-of-posts.git
 ```
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Posteriormente diríjase a la carpeta del proyecto
+```
+cd crud-of-posts
+```
+- Después debe instalar las dependencias que requiere el proyeco
+```
+npm install
+```
+- Si por alguna razón hay un error en la instalación, solo vuelva a ejecutar el comando anterior
+- Finalmente, para correr el proyecto en su navegador el proyecto ejecute  el siguiente comando
+```
+ng serve --open
+```
