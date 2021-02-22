@@ -8,11 +8,22 @@ Esta es una página sencilla que muestra posts de prueba con sus respectivos com
 ##### NOTA
 ***
 
-A continuación adjunto una captura de pantalla tomada del sitio de [JSONPlaceholder](https://jsonplaceholder.typicode.com/) donde se muestran las rutas con los métodos con los que es posible hacer peticiones a la API proporcionada. El proyecto desarrollado solo hace uso de las rutas que se encanrgan de recuperar con GET los posts y comentarios, ya que no se proporciona una ruta que permita eliminar, añadir o editar un **comentario**, pero debido a que la prueba solicita *poder agregar comentarios a los posts*, *editar comentarios*, y *eliminar comentarios* realicé dichas funcionalidades, pero al no haber una ruta en [JSONPlaceholder](https://jsonplaceholder.typicode.com/) que permita efectuar estas acciones, lo hice de manera que los comentarios y cambios en ellos se guarden en un array de manera temporal en la página, así que al refrescar la página se perderan los datos que usted haya ingresado, ya que la API no permite guardar los cambios en anteriores o nuevos comentarios.
+A continuación adjunto una captura de pantalla tomada del sitio de [JSONPlaceholder](https://jsonplaceholder.typicode.com/) donde se muestran las rutas y los métodos con los que es posible hacer peticiones a la API proporcionada. El proyecto desarrollado solo hace uso de las rutas que se encargan de recuperar con GET los posts y comentarios, ya que no se proporciona una ruta que permita eliminar, añadir o editar un **comentario**, pero debido a que la prueba solicita *poder agregar comentarios a los posts*, *editar comentarios*, y *eliminar comentarios* realicé dichas funcionalidades, pero al no haber una ruta en [JSONPlaceholder](https://jsonplaceholder.typicode.com/) que permita efectuar estas acciones, lo hice de manera que los comentarios y cambios en ellos se guarden en un array de manera temporal en la página, así que al refrescarla página se perderán los datos que usted haya ingresado, ya que la API no permite guardar los cambios en anteriores o nuevos comentarios.
 
 ![Rutas admitidas](https://i.ibb.co/vJ7p5q5/Screenshot-2021-02-21-JSONPlaceholder-Free-Fake-REST-API.png)
 
-## Development server
+Habiendo aclarado el contexto con el que desarrollé este proyecto mostraré cómo puede ver y usar dicho proyecto en línea o de forma local en su computadora.
+
+## Link del proyecto
+
+[Crud de Posts](https://salussole.github.io/crud-of-posts/).
+
+## Cómo clonar y ejecutar el proyecto de forma local
+
+Antes de clonar y ejecutar este proyecto en su computadora asegurese de tener instalado git y node.
+
+- Para clonar el repositorio abra una terminal o línea de comandos en el directorio donde desee clonar el repositorio y ejecute lo siguiente:
+  git clone https://github.com/SalusSole/crud-of-posts.git
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
