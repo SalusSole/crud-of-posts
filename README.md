@@ -24,6 +24,7 @@ Antes de clonar y ejecutar este proyecto en su computadora asegurese de tener in
 
 - Para clonar el repositorio abra una terminal o línea de comandos en el directorio donde desee clonar el repositorio y ejecute lo siguiente:
     git clone https://github.com/SalusSole/crud-of-posts.git
+    html
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
