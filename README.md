@@ -5,12 +5,12 @@ Desarrollé este proyecto con Angular en su versión 11.0.6.
 Esta es una página sencilla que muestra posts de prueba con sus respectivos comentarios obtenidos de [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 
 ***
-### NOTA
+##### NOTA
 ***
 
 A continuación muestro una captura de pantalla tomada del sitio de JSONPlacehlder donde se muestran las rutas con los métodos con los que es posible hacer peticiones a la API proporcionada. El proyecto desarrollado solo hace uso de las rutas que se encanrgan de recuperar con GET los posts y comentarios, ya que no se proporciona una ruta que permita eliminar, añadir o editar un **comentario**, pero debido a que la prueba solicita *poder agregar comentarios a los posts*, *editar comentarios*, y *eliminar comentarios* realicé dichas funcionalidades, pero al no haber una ruta en JSONPlaceholder que permita efectuar estas acciones lo hice de manera que se guardan en un array de manera temporal en la página, así que al refrescar la página se pierden los datos que usted haya ingresado, ya que la API no permite guardar los cambios en anteriores o nuevos comentarios.
 
-[Rutas admitidas](https://i.ibb.co/vJ7p5q5/Screenshot-2021-02-21-JSONPlaceholder-Free-Fake-REST-API.png)
+![Rutas admitidas](https://i.ibb.co/vJ7p5q5/Screenshot-2021-02-21-JSONPlaceholder-Free-Fake-REST-API.png)
 
 ## Development server
 
