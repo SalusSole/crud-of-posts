@@ -12,7 +12,7 @@ A continuación adjunto una captura de pantalla tomada del sitio de [JSONPlaceho
 
 ![Rutas admitidas](https://i.ibb.co/vJ7p5q5/Screenshot-2021-02-21-JSONPlaceholder-Free-Fake-REST-API.png)
 
-Habiendo aclarado el contexto con el que desarrollé este proyecto, mostraré cómo puede evaluar dicho proyecto en su computadora de forma local.
+Habiendo aclarado el contexto con el que desarrollé este proyecto, mostraré cómo puede evaluar dicho proyecto de forma local.
 
 ## Cómo clonar y ejecutar el proyecto de forma local
 
